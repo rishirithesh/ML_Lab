@@ -1,0 +1,564 @@
+{
+    "metadata": {
+        "experiment_number": "7",
+        "assignment_folder": "Assignment 6",
+        "title": "Bagging, Boosting, and Stacked Ensemble Models",
+        "dataset": "Wisconsin Diagnostic Breast Cancer (WDBC)",
+        "student_name": "Rishi Rithesh",
+        "register_number": "3122247001049",
+        "faculty": "Dr. Poreddy Ajay Kumar Reddy",
+        "github_url": "https://github.com/rishirithesh/ML_Lab"
+    },
+    "dataset_summary": {
+        "total_samples": 569,
+        "train_samples": 455,
+        "test_samples": 114,
+        "num_features": 30,
+        "malignant_count": 212,
+        "benign_count": 357,
+        "missing_values": 0
+    },
+    "table1_bagging": [
+        {
+            "n_estimators": 10,
+            "max_samples": 0.5,
+            "avg_cv_accuracy": 94.07,
+            "cv_accuracy_std": 2.47,
+            "avg_cv_f1": 0.9163,
+            "avg_cv_precision": 0.9555,
+            "avg_cv_recall": 0.8824
+        },
+        {
+            "n_estimators": 10,
+            "max_samples": 0.7,
+            "avg_cv_accuracy": 94.73,
+            "cv_accuracy_std": 1.76,
+            "avg_cv_f1": 0.9261,
+            "avg_cv_precision": 0.9693,
+            "avg_cv_recall": 0.8882
+        },
+        {
+            "n_estimators": 10,
+            "max_samples": 0.8,
+            "avg_cv_accuracy": 94.51,
+            "cv_accuracy_std": 1.97,
+            "avg_cv_f1": 0.9226,
+            "avg_cv_precision": 0.9711,
+            "avg_cv_recall": 0.8824
+        },
+        {
+            "n_estimators": 10,
+            "max_samples": 1.0,
+            "avg_cv_accuracy": 96.04,
+            "cv_accuracy_std": 1.92,
+            "avg_cv_f1": 0.9459,
+            "avg_cv_precision": 0.966,
+            "avg_cv_recall": 0.9294
+        },
+        {
+            "n_estimators": 25,
+            "max_samples": 0.5,
+            "avg_cv_accuracy": 95.6,
+            "cv_accuracy_std": 2.31,
+            "avg_cv_f1": 0.9404,
+            "avg_cv_precision": 0.9474,
+            "avg_cv_recall": 0.9353
+        },
+        {
+            "n_estimators": 25,
+            "max_samples": 0.7,
+            "avg_cv_accuracy": 96.26,
+            "cv_accuracy_std": 1.49,
+            "avg_cv_f1": 0.9492,
+            "avg_cv_precision": 0.9589,
+            "avg_cv_recall": 0.9412
+        },
+        {
+            "n_estimators": 25,
+            "max_samples": 0.8,
+            "avg_cv_accuracy": 96.92,
+            "cv_accuracy_std": 1.08,
+            "avg_cv_f1": 0.9585,
+            "avg_cv_precision": 0.9655,
+            "avg_cv_recall": 0.9529
+        },
+        {
+            "n_estimators": 25,
+            "max_samples": 1.0,
+            "avg_cv_accuracy": 97.14,
+            "cv_accuracy_std": 2.15,
+            "avg_cv_f1": 0.9621,
+            "avg_cv_precision": 0.96,
+            "avg_cv_recall": 0.9647
+        },
+        {
+            "n_estimators": 50,
+            "max_samples": 0.5,
+            "avg_cv_accuracy": 95.82,
+            "cv_accuracy_std": 2.64,
+            "avg_cv_f1": 0.9434,
+            "avg_cv_precision": 0.9529,
+            "avg_cv_recall": 0.9353
+        },
+        {
+            "n_estimators": 50,
+            "max_samples": 0.7,
+            "avg_cv_accuracy": 96.48,
+            "cv_accuracy_std": 2.13,
+            "avg_cv_f1": 0.9515,
+            "avg_cv_precision": 0.9696,
+            "avg_cv_recall": 0.9353
+        },
+        {
+            "n_estimators": 50,
+            "max_samples": 0.8,
+            "avg_cv_accuracy": 96.48,
+            "cv_accuracy_std": 1.46,
+            "avg_cv_f1": 0.9526,
+            "avg_cv_precision": 0.9588,
+            "avg_cv_recall": 0.9471
+        },
+        {
+            "n_estimators": 50,
+            "max_samples": 1.0,
+            "avg_cv_accuracy": 96.04,
+            "cv_accuracy_std": 1.92,
+            "avg_cv_f1": 0.9467,
+            "avg_cv_precision": 0.9535,
+            "avg_cv_recall": 0.9412
+        },
+        {
+            "n_estimators": 100,
+            "max_samples": 0.5,
+            "avg_cv_accuracy": 95.82,
+            "cv_accuracy_std": 2.73,
+            "avg_cv_f1": 0.9436,
+            "avg_cv_precision": 0.9542,
+            "avg_cv_recall": 0.9353
+        },
+        {
+            "n_estimators": 100,
+            "max_samples": 0.7,
+            "avg_cv_accuracy": 96.26,
+            "cv_accuracy_std": 2.15,
+            "avg_cv_f1": 0.9487,
+            "avg_cv_precision": 0.9644,
+            "avg_cv_recall": 0.9353
+        },
+        {
+            "n_estimators": 100,
+            "max_samples": 0.8,
+            "avg_cv_accuracy": 95.6,
+            "cv_accuracy_std": 2.41,
+            "avg_cv_f1": 0.9399,
+            "avg_cv_precision": 0.9586,
+            "avg_cv_recall": 0.9235
+        },
+        {
+            "n_estimators": 100,
+            "max_samples": 1.0,
+            "avg_cv_accuracy": 96.26,
+            "cv_accuracy_std": 2.26,
+            "avg_cv_f1": 0.9496,
+            "avg_cv_precision": 0.9592,
+            "avg_cv_recall": 0.9412
+        },
+        {
+            "n_estimators": 200,
+            "max_samples": 0.5,
+            "avg_cv_accuracy": 95.16,
+            "cv_accuracy_std": 2.83,
+            "avg_cv_f1": 0.9341,
+            "avg_cv_precision": 0.9482,
+            "avg_cv_recall": 0.9235
+        },
+        {
+            "n_estimators": 200,
+            "max_samples": 0.7,
+            "avg_cv_accuracy": 96.26,
+            "cv_accuracy_std": 2.15,
+            "avg_cv_f1": 0.9487,
+            "avg_cv_precision": 0.9644,
+            "avg_cv_recall": 0.9353
+        },
+        {
+            "n_estimators": 200,
+            "max_samples": 0.8,
+            "avg_cv_accuracy": 95.82,
+            "cv_accuracy_std": 2.45,
+            "avg_cv_f1": 0.943,
+            "avg_cv_precision": 0.9588,
+            "avg_cv_recall": 0.9294
+        },
+        {
+            "n_estimators": 200,
+            "max_samples": 1.0,
+            "avg_cv_accuracy": 95.82,
+            "cv_accuracy_std": 2.45,
+            "avg_cv_f1": 0.943,
+            "avg_cv_precision": 0.9588,
+            "avg_cv_recall": 0.9294
+        }
+    ],
+    "table2_boosting": [
+        {
+            "algorithm": "Gradient Boosting",
+            "n_estimators": 20,
+            "learning_rate": 0.01,
+            "max_depth": 2,
+            "avg_cv_accuracy": 62.64,
+            "cv_accuracy_std": 0.0,
+            "avg_cv_f1": 0.0
+        },
+        {
+            "algorithm": "Gradient Boosting",
+            "n_estimators": 20,
+            "learning_rate": 0.1,
+            "max_depth": 2,
+            "avg_cv_accuracy": 94.95,
+            "cv_accuracy_std": 1.92,
+            "avg_cv_f1": 0.93
+        },
+        {
+            "algorithm": "Gradient Boosting",
+            "n_estimators": 50,
+            "learning_rate": 0.01,
+            "max_depth": 2,
+            "avg_cv_accuracy": 92.09,
+            "cv_accuracy_std": 3.29,
+            "avg_cv_f1": 0.8854
+        },
+        {
+            "algorithm": "Gradient Boosting",
+            "n_estimators": 50,
+            "learning_rate": 0.05,
+            "max_depth": 3,
+            "avg_cv_accuracy": 94.73,
+            "cv_accuracy_std": 2.35,
+            "avg_cv_f1": 0.9285
+        },
+        {
+            "algorithm": "Gradient Boosting",
+            "n_estimators": 50,
+            "learning_rate": 0.1,
+            "max_depth": 3,
+            "avg_cv_accuracy": 95.6,
+            "cv_accuracy_std": 1.84,
+            "avg_cv_f1": 0.9404
+        },
+        {
+            "algorithm": "Gradient Boosting",
+            "n_estimators": 100,
+            "learning_rate": 0.01,
+            "max_depth": 3,
+            "avg_cv_accuracy": 93.85,
+            "cv_accuracy_std": 1.49,
+            "avg_cv_f1": 0.9138
+        },
+        {
+            "algorithm": "Gradient Boosting",
+            "n_estimators": 100,
+            "learning_rate": 0.05,
+            "max_depth": 3,
+            "avg_cv_accuracy": 96.04,
+            "cv_accuracy_std": 1.79,
+            "avg_cv_f1": 0.9473
+        },
+        {
+            "algorithm": "Gradient Boosting",
+            "n_estimators": 100,
+            "learning_rate": 0.1,
+            "max_depth": 3,
+            "avg_cv_accuracy": 96.7,
+            "cv_accuracy_std": 1.39,
+            "avg_cv_f1": 0.9553
+        },
+        {
+            "algorithm": "Gradient Boosting",
+            "n_estimators": 100,
+            "learning_rate": 0.2,
+            "max_depth": 3,
+            "avg_cv_accuracy": 96.26,
+            "cv_accuracy_std": 1.64,
+            "avg_cv_f1": 0.9489
+        },
+        {
+            "algorithm": "Gradient Boosting",
+            "n_estimators": 200,
+            "learning_rate": 0.05,
+            "max_depth": 3,
+            "avg_cv_accuracy": 96.92,
+            "cv_accuracy_std": 1.46,
+            "avg_cv_f1": 0.9581
+        },
+        {
+            "algorithm": "Gradient Boosting",
+            "n_estimators": 200,
+            "learning_rate": 0.1,
+            "max_depth": 3,
+            "avg_cv_accuracy": 96.92,
+            "cv_accuracy_std": 1.28,
+            "avg_cv_f1": 0.9582
+        },
+        {
+            "algorithm": "Gradient Boosting",
+            "n_estimators": 200,
+            "learning_rate": 0.2,
+            "max_depth": 2,
+            "avg_cv_accuracy": 97.36,
+            "cv_accuracy_std": 1.12,
+            "avg_cv_f1": 0.9641
+        },
+        {
+            "algorithm": "AdaBoost",
+            "n_estimators": 20,
+            "learning_rate": 0.1,
+            "max_depth": 1,
+            "avg_cv_accuracy": 93.19,
+            "cv_accuracy_std": 3.43,
+            "avg_cv_f1": 0.9055
+        },
+        {
+            "algorithm": "AdaBoost",
+            "n_estimators": 50,
+            "learning_rate": 0.1,
+            "max_depth": 1,
+            "avg_cv_accuracy": 95.16,
+            "cv_accuracy_std": 2.37,
+            "avg_cv_f1": 0.9336
+        },
+        {
+            "algorithm": "AdaBoost",
+            "n_estimators": 50,
+            "learning_rate": 0.5,
+            "max_depth": 1,
+            "avg_cv_accuracy": 96.48,
+            "cv_accuracy_std": 1.89,
+            "avg_cv_f1": 0.9512
+        },
+        {
+            "algorithm": "AdaBoost",
+            "n_estimators": 50,
+            "learning_rate": 1.0,
+            "max_depth": 1,
+            "avg_cv_accuracy": 96.7,
+            "cv_accuracy_std": 1.55,
+            "avg_cv_f1": 0.9546
+        },
+        {
+            "algorithm": "AdaBoost",
+            "n_estimators": 100,
+            "learning_rate": 0.1,
+            "max_depth": 1,
+            "avg_cv_accuracy": 96.04,
+            "cv_accuracy_std": 2.26,
+            "avg_cv_f1": 0.9455
+        },
+        {
+            "algorithm": "AdaBoost",
+            "n_estimators": 100,
+            "learning_rate": 0.5,
+            "max_depth": 1,
+            "avg_cv_accuracy": 97.14,
+            "cv_accuracy_std": 1.12,
+            "avg_cv_f1": 0.9607
+        },
+        {
+            "algorithm": "AdaBoost",
+            "n_estimators": 100,
+            "learning_rate": 1.0,
+            "max_depth": 1,
+            "avg_cv_accuracy": 96.48,
+            "cv_accuracy_std": 1.46,
+            "avg_cv_f1": 0.9523
+        },
+        {
+            "algorithm": "AdaBoost",
+            "n_estimators": 200,
+            "learning_rate": 0.5,
+            "max_depth": 1,
+            "avg_cv_accuracy": 97.14,
+            "cv_accuracy_std": 0.88,
+            "avg_cv_f1": 0.9612
+        },
+        {
+            "algorithm": "AdaBoost",
+            "n_estimators": 200,
+            "learning_rate": 1.0,
+            "max_depth": 1,
+            "avg_cv_accuracy": 97.14,
+            "cv_accuracy_std": 1.49,
+            "avg_cv_f1": 0.961
+        }
+    ],
+    "table3_stacking": [
+        {
+            "base_models": "SVM, Na\u00efve Bayes, Decision Tree",
+            "meta_learner": "Logistic Regression",
+            "avg_cv_accuracy": 96.48,
+            "cv_accuracy_std": 1.62,
+            "avg_cv_f1": 0.9519,
+            "avg_cv_precision": 0.9703,
+            "avg_cv_recall": 0.9353
+        },
+        {
+            "base_models": "SVM, Na\u00efve Bayes",
+            "meta_learner": "Logistic Regression",
+            "avg_cv_accuracy": 96.48,
+            "cv_accuracy_std": 1.28,
+            "avg_cv_f1": 0.9526,
+            "avg_cv_precision": 0.9596,
+            "avg_cv_recall": 0.9471
+        },
+        {
+            "base_models": "SVM, Decision Tree",
+            "meta_learner": "Logistic Regression",
+            "avg_cv_accuracy": 96.7,
+            "cv_accuracy_std": 0.7,
+            "avg_cv_f1": 0.955,
+            "avg_cv_precision": 0.9705,
+            "avg_cv_recall": 0.9412
+        },
+        {
+            "base_models": "Na\u00efve Bayes, Decision Tree",
+            "meta_learner": "Logistic Regression",
+            "avg_cv_accuracy": 94.07,
+            "cv_accuracy_std": 2.83,
+            "avg_cv_f1": 0.9179,
+            "avg_cv_precision": 0.9445,
+            "avg_cv_recall": 0.8941
+        },
+        {
+            "base_models": "SVM, Na\u00efve Bayes, Decision Tree",
+            "meta_learner": "Decision Tree",
+            "avg_cv_accuracy": 96.26,
+            "cv_accuracy_std": 1.12,
+            "avg_cv_f1": 0.949,
+            "avg_cv_precision": 0.9596,
+            "avg_cv_recall": 0.9412
+        },
+        {
+            "base_models": "SVM, Na\u00efve Bayes, Decision Tree",
+            "meta_learner": "Random Forest",
+            "avg_cv_accuracy": 96.26,
+            "cv_accuracy_std": 1.32,
+            "avg_cv_f1": 0.9484,
+            "avg_cv_precision": 0.9703,
+            "avg_cv_recall": 0.9294
+        }
+    ],
+    "table4_performance": [
+        {
+            "Model": "Baseline: Single Decision Tree",
+            "Accuracy (%)": 91.23,
+            "Precision": 0.9444,
+            "Recall": 0.8095,
+            "F1 Score": 0.8718,
+            "ROC-AUC": 0.877,
+            "Train Time (ms)": 9.55,
+            "Inference Time (ms)": 0.4
+        },
+        {
+            "Model": "Baseline: Support Vector Machine",
+            "Accuracy (%)": 97.37,
+            "Precision": 1.0,
+            "Recall": 0.9286,
+            "F1 Score": 0.963,
+            "ROC-AUC": 0.9947,
+            "Train Time (ms)": 19.09,
+            "Inference Time (ms)": 1.56
+        },
+        {
+            "Model": "Baseline: Gaussian Na\u00efve Bayes",
+            "Accuracy (%)": 92.11,
+            "Precision": 0.9231,
+            "Recall": 0.8571,
+            "F1 Score": 0.8889,
+            "ROC-AUC": 0.9891,
+            "Train Time (ms)": 0.96,
+            "Inference Time (ms)": 0.2
+        },
+        {
+            "Model": "Bagging Classifier (Decision Tree)",
+            "Accuracy (%)": 97.37,
+            "Precision": 1.0,
+            "Recall": 0.9286,
+            "F1 Score": 0.963,
+            "ROC-AUC": 0.9888,
+            "Train Time (ms)": 151.53,
+            "Inference Time (ms)": 2.86
+        },
+        {
+            "Model": "AdaBoost Classifier",
+            "Accuracy (%)": 97.37,
+            "Precision": 1.0,
+            "Recall": 0.9286,
+            "F1 Score": 0.963,
+            "ROC-AUC": 0.9861,
+            "Train Time (ms)": 621.68,
+            "Inference Time (ms)": 31.06
+        },
+        {
+            "Model": "Gradient Boosting Classifier",
+            "Accuracy (%)": 96.49,
+            "Precision": 1.0,
+            "Recall": 0.9048,
+            "F1 Score": 0.95,
+            "ROC-AUC": 0.994,
+            "Train Time (ms)": 717.29,
+            "Inference Time (ms)": 0.53
+        },
+        {
+            "Model": "Stacked Ensemble (SVM+NB+DT -> LR)",
+            "Accuracy (%)": 96.49,
+            "Precision": 1.0,
+            "Recall": 0.9048,
+            "F1 Score": 0.95,
+            "ROC-AUC": 0.9937,
+            "Train Time (ms)": 134.89,
+            "Inference Time (ms)": 2.28
+        }
+    ],
+    "bias_variance_decomposition": {
+        "Single Decision Tree": {
+            "loss": 0.08614035087719299,
+            "bias": 0.03508771929824561,
+            "variance": 0.06894736842105263,
+            "variance_pct": 6.894736842105263,
+            "bias_pct": 3.508771929824561,
+            "total_error_pct": 8.6140350877193
+        },
+        "Bagging (100 Trees)": {
+            "loss": 0.045087719298245614,
+            "bias": 0.02631578947368421,
+            "variance": 0.019824561403508772,
+            "variance_pct": 1.9824561403508771,
+            "bias_pct": 2.631578947368421,
+            "total_error_pct": 4.508771929824562
+        },
+        "AdaBoost (50 Stumps)": {
+            "loss": 0.03192982456140351,
+            "bias": 0.02631578947368421,
+            "variance": 0.015789473684210527,
+            "variance_pct": 1.5789473684210527,
+            "bias_pct": 2.631578947368421,
+            "total_error_pct": 3.192982456140351
+        },
+        "Gradient Boosting (100 Trees)": {
+            "loss": 0.041578947368421056,
+            "bias": 0.02631578947368421,
+            "variance": 0.02087719298245614,
+            "variance_pct": 2.087719298245614,
+            "bias_pct": 2.631578947368421,
+            "total_error_pct": 4.157894736842105
+        },
+        "Stacked Ensemble (SVM+NB+DT)": {
+            "loss": 0.03859649122807018,
+            "bias": 0.03508771929824561,
+            "variance": 0.01649122807017544,
+            "variance_pct": 1.6491228070175439,
+            "bias_pct": 3.508771929824561,
+            "total_error_pct": 3.8596491228070176
+        }
+    }
+}
